@@ -11,7 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     var number = 0
-    var 
+    var a = 0.0
+    var b = 0.0
+    var c = 0.0
+    var d = 0
     
     @IBOutlet weak var result1: UITextField!
     @IBOutlet weak var result2: UITextField!
@@ -20,7 +23,7 @@ class ViewController: UIViewController {
     @IBAction func number0(_ sender: Any) {
         if result.text == ""
         {
-            result.text = ""
+            result.text = "0"
         }
         else
         {
@@ -78,6 +81,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func jia(_ sender: Any) {
+        if result.text == ""
+        {
+            result.text = "0"
+            number = 1
+        }
+        else
+        {
+            a = Double(result.text!)!
+            result1.text = String(a)
+            result.text  = ""
+            number = 1
+            d = 0
+        }
     }
     
     @IBAction func jian(_ sender: Any) {
@@ -90,7 +106,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func equal(_ sender: Any) {
-        
+        b = Double(result.text!)!
+        result.text = "0"
+        if number == 1
+        {
+            c = a + b
+        }
     }
     
     
