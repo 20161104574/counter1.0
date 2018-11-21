@@ -68,16 +68,40 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dian(_ sender: Any) {
-        
+        if d == 0
+        {
+            result.text = result.text! + "."
+        }
+        else
+        {
+            result.text = result.text
+        }
     }
     
     @IBAction func clear(_ sender: Any) {
+        result.text = ""
+        result1.text = ""
+        result2.text = ""
     }
     
     @IBAction func change(_ sender: Any) {
+        let count = Double(result.text!)!
+        
+        let count2 = -count
+        
+        result.text = String(count2)
+        
+        d = 0
     }
     
     @IBAction func baifenhao1(_ sender: Any) {
+        let count = Double(result.text!)!
+        
+        let count2 = count * 0.01
+        
+        result.text = String(count2)
+        
+        d = 0
     }
     
     @IBAction func jia(_ sender: Any) {
@@ -97,12 +121,51 @@ class ViewController: UIViewController {
     }
     
     @IBAction func jian(_ sender: Any) {
+        if result.text == ""
+        {
+            result.text = "0"
+            number = 2
+        }
+        else
+        {
+            a = Double(result.text!)!
+            result1.text = String(a)
+            result.text  = ""
+            number = 2
+            d = 0
+        }
     }
     
     @IBAction func cheng(_ sender: Any) {
+        if result.text == ""
+        {
+            result.text = "0"
+            number = 3
+        }
+        else
+        {
+            a = Double(result.text!)!
+            result1.text = String(a)
+            result.text  = ""
+            number = 3
+            d = 0
+        }
     }
     
     @IBAction func chu(_ sender: Any) {
+        if result.text == ""
+        {
+            result.text = "0"
+            number = 4
+        }
+        else
+        {
+            a = Double(result.text!)!
+            result1.text = String(a)
+            result.text  = ""
+            number = 4
+            d = 0
+        }
     }
     
     @IBAction func equal(_ sender: Any) {
@@ -111,6 +174,18 @@ class ViewController: UIViewController {
         if number == 1
         {
             c = a + b
+        }
+        else if number == 2
+        {
+            c = a - b
+        }
+        else if number == 3
+        {
+            c = a * b
+        }
+        else if number == 4
+        {
+            c = a / b
         }
     }
     
