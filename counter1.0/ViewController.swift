@@ -16,12 +16,19 @@ class ViewController: UIViewController {
     var b = 0.0
     var c = 0.0
     var d = 0
-    
+    var userIsInTheMiddleOfTypingANumber:Bool = false
     @IBOutlet weak var result1: UITextField!
     @IBOutlet weak var result2: UITextField!
     @IBOutlet weak var result: UILabel!
     
-    @IBAction func number0(_ sender: Any) {
+    
+    @IBAction func append(_ sender: UIButton) {
+        let digit = sender.currentTitle!
+        
+    }
+    
+   
+    /* @IBAction func number0(_ sender: UIButton) {
         if re == 1
         {
             result.text = "0"
@@ -130,8 +137,8 @@ class ViewController: UIViewController {
             result.text = result.text! + "9"
         }
     }
-    
-    @IBAction func dian(_ sender: Any) {
+    */
+    /*@IBAction func dian(_ sender: Any) {
         result.text = result.text! + "."
         
         judge = 1
@@ -232,7 +239,7 @@ class ViewController: UIViewController {
             c = a / b
         }
     }
-    
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
